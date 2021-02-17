@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light d-flex border-bottom">
+  <a class="navbar-brand" href="http://localhost:3000/restaurants">Yelp MVP</a>
+  <%= link_to "Create Restaurant", new_restaurant_path %>  
+</nav>
+
+<div class='restaurants_page mt-5'>
+
+  <div class="container">
+    <% @restaurants.each do |restaurant| %>
+      <h6><%= link_to restaurant["name"], restaurant_path(restaurant["id"]) %></h6>
+    <% end %>
+  </div>
+</div>
